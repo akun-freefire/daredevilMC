@@ -6,7 +6,7 @@
 .discord-btn:hover{background:#4752c4;border-color:#4752c4;color:#fff}
 .discord-btn span{opacity:.85;margin-left:4px}
 .member-card{padding:18px 20px 22px 92px;min-height:150px}
-.member-avatar{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid #3a3a3a;background:#151515;display:grid;place-items:center}
+.member-avatar{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:0;overflow:hidden;border:2px solid #3a3a3a;background:#151515;display:grid;place-items:center}
 .member-avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15)}
 .member-card:hover .member-avatar{border-color:#fff}
 @media(max-width:500px){
@@ -25,7 +25,7 @@
   height:64px;
   left:20px;
   top:20px;
-  border-radius:50%;
+  border-radius:0;
   aspect-ratio:1/1;
   flex:0 0 64px;
   background:#111;
@@ -206,4 +206,23 @@
   .music-controls{gap:10px; margin-bottom:24px;}
   .music-toggle{width:52px;height:52px;}
   .music-nav{width:38px;height:38px;font-size:25px;}
+}
+
+/* Square member avatars - responsive */
+.member-avatar{
+  width:clamp(52px, 8vw, 64px);
+  height:clamp(52px, 8vw, 64px);
+  aspect-ratio:1 / 1;
+  border-radius:0;
+}
+@media(max-width:500px){
+  .member-card{
+    padding-left:clamp(78px, 24vw, 86px);
+  }
+  .member-avatar{
+    left:16px;
+    top:18px;
+    width:clamp(52px, 18vw, 60px);
+    height:clamp(52px, 18vw, 60px);
+  }
 }
