@@ -53,3 +53,30 @@ if (music) {
   });
   updateMusicButton();
 }
+
+// Music navigation buttons
+const musicPrev = document.getElementById("musicPrev");
+const musicNext = document.getElementById("musicNext");
+
+if (musicPrev && music) {
+  musicPrev.addEventListener("click", async () => {
+    music.currentTime = 0;
+    if (music.paused) {
+      try { await music.play(); } catch (error) { console.warn("Musik gagal diputar:", error); }
+    }
+    updateMusicButton();
+  });
+}
+
+if (musicNext && music) {
+  musicNext.addEventListener("click", async () => {
+    music.currentTime = Math.min(
+      Math.max(0, music.duration || music.currentTime + 10),
+      music.currentTime + 10
+    );
+    if (music.paused) {
+      try { await music.play(); } catch (error) { console.warn("Musik gagal diputar:", error); }
+    }
+    updateMusicButton();
+  });
+}
