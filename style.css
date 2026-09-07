@@ -226,3 +226,184 @@
     height:clamp(52px, 18vw, 60px);
   }
 }
+
+/* ===== DAREDEVIL MC — MOTOR CLUB VISUAL SYSTEM ===== */
+:root{
+  --black:#070707;
+  --panel:#101112;
+  --panel-2:#151617;
+  --line:#292b2d;
+  --white:#f2f1ed;
+  --muted:#96989a;
+  --red:#c52a2f;
+  --red-dark:#8f1f24;
+  --steel:#87909a;
+  --gold:#b59a61;
+}
+body{
+  background:
+    radial-gradient(circle at 15% 18%, rgba(197,42,47,.055), transparent 28%),
+    radial-gradient(circle at 85% 72%, rgba(181,154,97,.035), transparent 25%),
+    var(--black);
+  color:var(--white);
+  font-family:"Oswald",Arial,sans-serif;
+  letter-spacing:.045em;
+}
+.topbar{
+  background:rgba(7,7,7,.94);
+  border-bottom:1px solid rgba(197,42,47,.28);
+  box-shadow:0 8px 30px rgba(0,0,0,.3);
+}
+.brand{
+  font-family:"Anton","Bebas Neue",sans-serif;
+  letter-spacing:.045em;
+}
+.brand span{
+  color:var(--red);
+  border-left-color:#4b3031;
+}
+nav a{color:#bfc1c2}
+nav a:hover{color:var(--red)}
+.hero{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.90)),
+    linear-gradient(90deg,rgba(197,42,47,.08),transparent 42%,rgba(181,154,97,.045)),
+    url("hero.png") center/cover fixed;
+}
+.hero-overlay{
+  background:
+    linear-gradient(90deg,rgba(197,42,47,.07),transparent 35%,rgba(0,0,0,.15)),
+    radial-gradient(circle at center,transparent 0,rgba(0,0,0,.22) 55%,rgba(0,0,0,.92) 100%);
+}
+.logo-wrap img{
+  filter:grayscale(1) contrast(1.3) drop-shadow(0 0 22px rgba(197,42,47,.14));
+}
+.eyebrow{
+  color:var(--red);
+  font-weight:600;
+  letter-spacing:.38em;
+}
+.hero h1{
+  font-family:"Anton","Bebas Neue",sans-serif;
+  font-weight:400;
+  letter-spacing:.035em;
+  text-shadow:4px 5px 0 rgba(197,42,47,.13);
+}
+.motto{
+  color:#b9b7b1;
+  letter-spacing:.30em;
+}
+.btn{
+  border-color:#777b7e;
+  background:rgba(10,10,10,.45);
+}
+.btn:hover{
+  background:var(--white);
+  color:#080808;
+  border-color:var(--white);
+}
+.discord-btn{
+  background:#5865f2;
+  border-color:#5865f2;
+}
+.country-btn{
+  background:var(--red);
+  border-color:var(--red);
+  box-shadow:0 8px 24px rgba(197,42,47,.16);
+}
+.country-btn:hover{
+  background:var(--red-dark);
+  border-color:var(--red-dark);
+  color:#fff;
+}
+.section-head{
+  border-bottom-color:var(--line);
+  position:relative;
+}
+.section-head:after{
+  content:"";
+  display:block;
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:72px;
+  height:2px;
+  background:var(--red);
+}
+.section-head span{color:var(--red);font-weight:600}
+.section-head h2{
+  font-family:"Anton","Bebas Neue",sans-serif;
+  font-weight:400;
+  letter-spacing:.055em;
+}
+.chapter-card{
+  border-color:#303235;
+  background:
+    linear-gradient(135deg,rgba(197,42,47,.055),transparent 38%),
+    linear-gradient(145deg,#151617,#090909);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+.chapter-mark{
+  font-family:"Teko","Bebas Neue",sans-serif;
+  color:var(--red);
+  font-size:82px;
+}
+.chapter-card h3{
+  font-family:"Anton","Oswald",sans-serif;
+  font-weight:400;
+  letter-spacing:.025em;
+}
+.chapter-card p{color:#a1a3a4}
+.facts{border-left-color:#343638}
+.facts div{border-bottom-color:#282a2c}
+.facts span{color:#777b7d}
+.facts strong{font-family:"Oswald";font-weight:600}
+.member-card{
+  background:linear-gradient(135deg,#121314,#0b0b0b);
+  border-color:#292b2d;
+  transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+.member-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(197,42,47,.5);
+  background:linear-gradient(135deg,#181314,#0b0b0b);
+}
+.member-card:before{background:var(--red)}
+.member-card.featured{
+  background:
+    linear-gradient(135deg,rgba(197,42,47,.10),transparent 48%),
+    linear-gradient(135deg,#171718,#090909);
+}
+.member-avatar{
+  border-color:#3a3d40;
+  box-shadow:0 5px 18px rgba(0,0,0,.35);
+}
+.member-card:hover .member-avatar{border-color:var(--red)}
+.rank{color:#85898c}
+.member-card h3{
+  font-family:"Teko","Bebas Neue",sans-serif;
+  font-size:34px;
+  font-weight:600;
+  line-height:.95;
+  letter-spacing:.045em;
+}
+.member-card p{color:#73777a}
+.gallery-grid img{
+  filter:grayscale(.85) contrast(1.05);
+  border-color:#2a2c2e;
+}
+.gallery-grid img:hover{
+  filter:grayscale(.05) contrast(1.05);
+  box-shadow:0 10px 35px rgba(0,0,0,.45);
+}
+.gallery-note{color:#808386}
+.music-toggle,.music-nav{color:#ddd}
+footer{border-top-color:#292b2d}
+footer div{
+  font-family:"Anton","Bebas Neue",sans-serif;
+  font-weight:400;
+}
+footer span{color:var(--red)}
+@media(max-width:800px){
+  .topbar.open nav{background:#0a0a0a;border-bottom-color:rgba(197,42,47,.3)}
+}
