@@ -268,7 +268,7 @@ nav a:hover{color:var(--red)}
   background:
     linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.90)),
     linear-gradient(90deg,rgba(197,42,47,.08),transparent 42%,rgba(181,154,97,.045)),
-    url("assets/hero.png") center/cover fixed;
+    url("assets/hero1.png") center/cover fixed;
 }
 .hero-overlay{
   background:
@@ -477,7 +477,7 @@ nav a:hover:after{transform:scaleX(1)}
   background:
     linear-gradient(180deg,rgba(0,0,0,.40),rgba(0,0,0,.86)),
     radial-gradient(circle at 50% 42%,transparent 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,.72) 100%),
-    url("assets/hero.png") center/cover fixed;
+    url("assets/hero1.png") center/cover fixed;
 }
 .hero-overlay{
   background:
@@ -643,7 +643,7 @@ footer small{color:#666a6c}
 .story-next-btn{min-width:260px;text-align:center}
 
 /* ===== ACTIVITY PAGE ===== */
-.page-hero{min-height:56svh;position:relative;display:grid;place-items:end start;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.92)),url("assets/hero.png") center/cover}
+.page-hero{min-height:56svh;position:relative;display:grid;place-items:end start;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.92)),url("assets/hero1.png") center/cover}
 .page-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(169,37,42,.09),transparent 45%,rgba(0,0,0,.28));pointer-events:none}
 .page-hero-content{position:relative;z-index:1;width:100%;max-width:1200px;padding:150px 7vw 65px}
 .page-hero .eyebrow{margin:0 0 12px}
@@ -670,3 +670,86 @@ footer small{color:#666a6c}
 .back-btn{min-width:180px;text-align:center}
 @media(max-width:800px){.story-layout{grid-template-columns:1fr;gap:18px}.story-photo,.story-photo img{min-height:440px}.story-copy{padding:30px 25px}.page-hero-content{padding:125px 5vw 55px}.activity-card{grid-template-columns:105px 1fr;gap:18px}.activity-meta{grid-column:2;text-align:left;min-width:0}.activity-date{padding-right:18px}.activity-footer{align-items:flex-start;flex-direction:column}}
 @media(max-width:500px){.story-photo,.story-photo img{min-height:390px}.story-photo-caption{left:18px;right:18px;bottom:18px;font-size:8px}.story-copy{padding:25px 20px}.story-copy h3{font-size:29px}.story-next-btn{width:100%;min-width:0}.activity-card{grid-template-columns:1fr;gap:15px;padding:22px 18px}.activity-date{border-right:0;border-bottom:1px solid #333537;padding:0 0 14px;display:flex;align-items:baseline;gap:10px}.activity-date .day{font-size:38px}.activity-date .month{margin-top:0}.activity-meta{grid-column:auto}.page-hero h1{font-size:62px}}
+
+/* ===== HERO IMAGE SPLIT: HERO1 / HERO2 ===== */
+.hero{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.40),rgba(0,0,0,.86)),
+    radial-gradient(circle at 50% 42%,transparent 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,.72) 100%),
+    url("assets/hero1.png") center 38%/cover no-repeat;
+  background-attachment:scroll;
+}
+
+/* Story photo is now the background inside the story content */
+.story-layout{
+  display:block;
+  max-width:1180px;
+  margin:0 auto;
+}
+.story-photo{display:none}
+.story-copy{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:680px;
+  padding:0;
+  display:flex;
+  align-items:stretch;
+  border:1px solid rgba(220,216,204,.16);
+  background:#090a0b;
+  box-shadow:0 24px 65px rgba(0,0,0,.35);
+}
+.story-background{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.78) 38%,rgba(0,0,0,.48) 72%,rgba(0,0,0,.68) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.72)),
+    url("assets/hero2.png") center/cover no-repeat;
+  filter:saturate(.75);
+}
+.story-copy:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(135deg,rgba(185,161,107,.06),transparent 35%,rgba(169,37,42,.045) 100%);
+}
+.story-content{
+  width:min(720px,100%);
+  padding:52px;
+  position:relative;
+  z-index:1;
+}
+.story-copy .chapter-mark{margin-bottom:18px}
+@media(max-width:800px){
+  .hero{
+    min-height:100svh;
+    background-position:center 32%;
+    background-size:cover;
+  }
+  .story-copy{
+    min-height:0;
+  }
+  .story-content{
+    padding:36px 26px 40px;
+  }
+  .story-background{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.60) 0%,rgba(0,0,0,.80) 45%,rgba(0,0,0,.93) 100%),
+      url("assets/hero2.png") center 28%/cover no-repeat;
+  }
+}
+@media(max-width:500px){
+  .hero{
+    background-position:center 30%;
+  }
+  .story-content{
+    padding:30px 20px 34px;
+  }
+  .story-copy h3{
+    font-size:30px;
+  }
+}
