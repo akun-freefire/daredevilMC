@@ -14,14 +14,14 @@ if (btn) {
 */
 const music = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
-const musicLabel = document.getElementById("musicLabel");
+
 
 function updateMusicButton() {
-  if (!music || !musicLabel || !musicToggle) return;
+  if (!music || !musicToggle) return;
   const playing = !music.paused;
-  musicLabel.textContent = playing ? "PAUSE MUSIC" : "PLAY MUSIC";
   musicToggle.classList.toggle("playing", playing);
   musicToggle.setAttribute("aria-label", playing ? "Jeda musik" : "Putar musik");
+  musicToggle.setAttribute("aria-pressed", String(playing));
 }
 
 async function toggleMusic() {
@@ -49,7 +49,6 @@ if (music) {
   music.addEventListener("pause", updateMusicButton);
   music.addEventListener("ended", updateMusicButton);
   music.addEventListener("error", () => {
-    if (musicLabel) musicLabel.textContent = "MUSIC ERROR";
     console.error("File musik tidak dapat dimuat.");
   });
   updateMusicButton();
