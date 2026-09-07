@@ -623,3 +623,200 @@ footer small{color:#666a6c}
   .section-head h2{font-size:45px}
   .chapter-card{padding:28px}
 }
+
+
+/* ===== BLACKLETTER HEADINGS — H1 / H2 / H3 =====
+   Inspired by the Old English / blackletter specimen supplied by the owner.
+   UnifrakturCook is used as the web-safe Google Fonts equivalent.
+*/
+.hero h1,
+.section-head h2,
+.chapter-card h3,
+.member-card h3 {
+  font-family: "UnifrakturCook", "Old English Text MT", "UnifrakturMaguntia", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: .015em;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-transform: uppercase;
+}
+
+/* Keep the large hero title dramatic without making the blackletter too dense. */
+.hero h1 {
+  line-height: .88;
+  letter-spacing: .01em;
+  text-shadow: 3px 4px 0 rgba(197,42,47,.14);
+}
+
+/* Section titles */
+.section-head h2 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: .015em;
+}
+
+/* Card/member titles */
+.chapter-card h3,
+.member-card h3 {
+  line-height: 1;
+  letter-spacing: .01em;
+}
+
+.chapter-card h3 {
+  font-size: clamp(25px, 3vw, 36px);
+}
+
+.member-card h3 {
+  font-size: clamp(24px, 2.4vw, 32px);
+}
+
+@media (max-width: 800px) {
+  .hero h1 {
+    line-height: .86;
+  }
+
+  .section-head h2 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .chapter-card h3 {
+    font-size: 30px;
+  }
+
+  .member-card h3 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: clamp(58px, 21vw, 90px);
+    letter-spacing: 0;
+  }
+
+  .section-head h2 {
+    font-size: 40px;
+  }
+
+  .chapter-card h3 {
+    font-size: 27px;
+  }
+
+  .member-card h3 {
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================================
+   ELEGANT PREMIUM BLACKLETTER — H1 / H2 / H3
+   Refined Old English treatment: less aggressive, more luxury MC.
+   ========================================================= */
+
+.hero h1,
+.section-head h2,
+.chapter-card h3,
+.member-card h3 {
+  font-family: "UnifrakturMaguntia", "UnifrakturCook",
+               "Old English Text MT", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .018em;
+  font-feature-settings: "liga" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hero: commanding, but with breathing room */
+.hero h1 {
+  line-height: .94;
+  letter-spacing: .012em;
+  text-shadow:
+    0 2px 0 rgba(255,255,255,.035),
+    0 5px 18px rgba(0,0,0,.45);
+}
+
+/* Premium section headings */
+.section-head h2 {
+  font-size: clamp(40px, 5.5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: .022em;
+  text-shadow: 0 3px 12px rgba(0,0,0,.35);
+}
+
+/* Card titles */
+.chapter-card h3,
+.member-card h3 {
+  line-height: 1.05;
+  letter-spacing: .018em;
+  text-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.chapter-card h3 {
+  font-size: clamp(24px, 2.8vw, 34px);
+}
+
+.member-card h3 {
+  font-size: clamp(23px, 2.3vw, 30px);
+}
+
+/* Elegant red detail under major headings, without changing markup */
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 2px;
+  margin-top: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(197,42,47,.95),
+    rgba(197,42,47,.35),
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(197,42,47,.18);
+}
+
+/* Keep headings visually premium on compact screens */
+@media (max-width: 800px) {
+  .hero h1 {
+    line-height: .92;
+    letter-spacing: .008em;
+  }
+
+  .section-head h2 {
+    font-size: clamp(36px, 9vw, 54px);
+  }
+
+  .chapter-card h3 {
+    font-size: 29px;
+  }
+
+  .member-card h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: clamp(56px, 20vw, 86px);
+    line-height: .9;
+  }
+
+  .section-head h2 {
+    font-size: 39px;
+  }
+
+  .chapter-card h3 {
+    font-size: 26px;
+  }
+
+  .member-card h3 {
+    font-size: 24px;
+  }
+
+  .section-head h2::after {
+    width: 46px;
+    margin-top: 9px;
+  }
+}
