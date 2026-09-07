@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>DAREDEVIL MC — Activities</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="index.html#home">DAREDEVIL <span>MC</span></a>
+<button class="menu-btn" aria-label="Open menu">☰</button>
+<nav>
+<a href="index.html#home">HOME</a>
+<a href="index.html#story">STORY</a>
+<a href="index.html#member">MEMBERS</a>
+<a href="index.html#gallery">GALLERY</a>
+<a href="activity.html">ACTIVITY</a>
+</nav>
+</header>
+<main>
+<section class="page-hero">
+<div class="page-hero-content">
+<p class="eyebrow">DAREDEVIL MC / ROAD CALENDAR</p>
+<h1>NEXT ACTIVITIES</h1>
+<p>Keep the engine ready. Here is the upcoming Daredevil MC agenda — rides, garage nights, brotherhood gatherings and community activities.</p>
+</div>
+</section>
+<section id="activities" class="section activities">
+<div class="section-head"><span>02 / UPCOMING</span><h2>THE ROAD AHEAD</h2></div>
+<div class="activity-intro"><p>Upcoming club activities are listed below. Update the date, time, meeting point or event title whenever the MC confirms a new schedule.</p></div>
+<div class="activity-list">
+<article class="activity-card"><div class="activity-date"><span class="day">12</span><span class="month">SEP 2026</span></div><div class="activity-info"><span class="tag">SATURDAY · NIGHT RIDE</span><h3>STEEL NIGHT RUN</h3><p>Evening ride through the city followed by a brotherhood stop and late-night garage session.</p></div><div class="activity-meta"><strong>20:00</strong><span>GARAGE MEET POINT</span><span class="activity-status open">OPEN</span></div></article>
+<article class="activity-card"><div class="activity-date"><span class="day">20</span><span class="month">SEP 2026</span></div><div class="activity-info"><span class="tag">SUNDAY · GARAGE</span><h3>GARAGE &amp; MACHINE DAY</h3><p>Bike check, maintenance, detailing and preparation for the next long-distance run.</p></div><div class="activity-meta"><strong>10:00</strong><span>CLUB GARAGE</span><span class="activity-status">MEMBERS</span></div></article>
+<article class="activity-card"><div class="activity-date"><span class="day">27</span><span class="month">SEP 2026</span></div><div class="activity-info"><span class="tag">SUNDAY · GROUP RIDE</span><h3>IRON ROAD RUN</h3><p>A full-day group ride with a planned route, fuel stops and a brotherhood lunch.</p></div><div class="activity-meta"><strong>07:00</strong><span>MEET AT GARAGE</span><span class="activity-status open">OPEN</span></div></article>
+<article class="activity-card"><div class="activity-date"><span class="day">10</span><span class="month">OCT 2026</span></div><div class="activity-info"><span class="tag">SATURDAY · COMMUNITY</span><h3>ROAD &amp; BROTHERHOOD</h3><p>Community ride and gathering focused on friendship, safe riding and giving back on the road.</p></div><div class="activity-meta"><strong>09:00</strong><span>CITY MEET POINT</span><span class="activity-status open">OPEN</span></div></article>
+<article class="activity-card"><div class="activity-date"><span class="day">25</span><span class="month">OCT 2026</span></div><div class="activity-info"><span class="tag">SUNDAY · BROTHERHOOD</span><h3>MONTHLY CHAPTER MEET</h3><p>Monthly chapter meeting, upcoming route planning and a private brotherhood gathering.</p></div><div class="activity-meta"><strong>19:00</strong><span>CLUBHOUSE</span><span class="activity-status">MEMBERS</span></div></article>
+</div>
+<div class="activity-footer"><p>RIDE TOGETHER · RETURN TOGETHER</p><a class="btn back-btn" href="index.html#story">BACK TO STORY</a></div>
+</section>
+</main>
+<footer><div>DAREDEVIL MC <span>•</span> 1%</div><small>RIDE HARD, FEAR NOTHING</small></footer>
+<script>
+const topbar=document.querySelector(".topbar"),btn=document.querySelector(".menu-btn");
+if(btn){btn.addEventListener("click",()=>topbar.classList.toggle("open"));document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>topbar.classList.remove("open")));}
+</script>
+</body>
+</html>

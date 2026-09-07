@@ -7,7 +7,7 @@
   <title>DAREDEVIL MC — 1%</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +16,10 @@
   <button class="menu-btn" aria-label="Buka menu">☰</button>
   <nav>
     <a href="#home">HOME</a>
-    <a href="#chapter">CHAPTER</a>
-    <a href="#member">MEMBER</a>
+    <a href="#story">STORY</a>
+    <a href="#member">MEMBERS</a>
     <a href="#gallery">GALLERY</a>
+    <a href="activity.html">ACTIVITY</a>
   </nav>
 </header>
 
@@ -27,7 +28,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="logo-wrap">
-      <img src="logo.png" alt="Daredevil MC logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <img src="assets/logo.png" alt="Daredevil MC logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
       <div class="logo-fallback">DD<br><small>1% MC</small></div>
     </div>
     <p class="eyebrow">ONE PERCENT MOTORCYCLE CLUB</p>
@@ -42,7 +43,7 @@
       <button id="musicNext" class="music-nav" type="button" aria-label="Musik berikutnya">»</button>
     </div>
     <div class="hero-actions">
-      <a class="btn" href="#chapter">ENTER THE CHAPTER</a>
+      <a class="btn" href="#story">ENTER THE STORY</a>
       <a class="btn discord-btn" href="https://discord.gg/n5wTtvk5W" target="_blank" rel="noopener noreferrer" aria-label="Join us on Discord">
         <svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M19.54 5.1A16.2 16.2 0 0 0 15.5 3.86l-.5 1.02a14.8 14.8 0 0 0-5.98 0l-.5-1.02A16.2 16.2 0 0 0 4.46 5.1C1.9 8.93 1.2 12.67 1.54 16.35a16.1 16.1 0 0 0 4.96 2.5l1.2-1.64c-.66-.24-1.28-.53-1.87-.87l.46-.36c3.62 1.68 7.54 1.68 11.12 0l.46.36c-.59.34-1.21.63-1.87.87l1.2 1.64a16.1 16.1 0 0 0 4.96-2.5c.4-4.27-.68-7.97-2.62-11.25ZM8.35 14.1c-1.08 0-1.97-.99-1.97-2.2s.87-2.2 1.97-2.2 1.98.99 1.97 2.2c0 1.21-.87 2.2-1.97 2.2Zm7.3 0c-1.08 0-1.97-.99-1.97-2.2s.87-2.2 1.97-2.2 1.98.99 1.97 2.2c0 1.21-.87 2.2-1.97 2.2Z"/>
@@ -54,23 +55,78 @@
   </div>
 </section>
 
-<section id="chapter" class="section chapter">
+<section id="story" class="section story">
   <div class="section-head">
-    <span>01 / CHAPTER</span>
-    <h2>THE CHAPTER</h2>
+    <span>01 / THE ARCHIVE</span>
+    <h2>OUR HISTORY</h2>
   </div>
-  <div class="chapter-grid">
-    <div class="chapter-card">
-      <div class="chapter-mark">DD</div>
-      <h3>DAREDEVIL MC</h3>
-      <p>Brotherhood, loyalty and the open road. This chapter page is built as a dark, raw clubhouse-style profile for the Daredevil 1% Motorcycle Club.</p>
+
+  <div class="story-intro">
+    <div>
+      <span class="story-label">DAREDEVIL MOTORCYCLE CLUB</span>
+      <h3>A HISTORY WRITTEN<br>ONE RIDE AT A TIME.</h3>
     </div>
-    <div class="facts">
-      <div><span>CLUB</span><strong>DAREDEVIL MC</strong></div>
-      <div><span>STATUS</span><strong>1% MOTORCYCLE CLUB</strong></div>
-      <div><span>COLORS</span><strong>BLACK / WHITE</strong></div>
-      <div><span>MOTTO</span><strong>RIDE HARD, FEAR NOTHING</strong></div>
+    <p>Every club has a beginning. Ours began with a garage, a few machines, and a shared conviction that the road is better when it is travelled together. Daredevil MC grew from that foundation into a brotherhood defined by presence, loyalty and the quiet pride of carrying the patch.</p>
+  </div>
+
+  <div class="story-layout history-layout">
+    <div class="story-photo">
+      <img src="assets/hero.png" alt="Daredevil MC motorcycle" loading="lazy">
+      <div class="story-photo-caption">THE ARCHIVE · DAREDEVIL MC</div>
+      <div class="story-photo-stamp">DD<br><small>MC</small></div>
     </div>
+
+    <div class="history-timeline">
+      <article class="history-item">
+        <div class="history-number">I</div>
+        <div class="history-content">
+          <span>THE BEGINNING</span>
+          <h4>FROM THE GARAGE</h4>
+          <p>Before there was a name, there was the machine. Late nights in the garage became the place where riders met, stories were exchanged, and the first foundations of Daredevil MC were quietly formed.</p>
+        </div>
+      </article>
+
+      <article class="history-item">
+        <div class="history-number">II</div>
+        <div class="history-content">
+          <span>THE FOUNDATION</span>
+          <h4>THE PATCH MEANT SOMETHING</h4>
+          <p>The club was never meant to be defined by numbers alone. The patch became a mark of commitment — a reminder that respect is earned, loyalty is returned, and every member carries the reputation of the brotherhood.</p>
+        </div>
+      </article>
+
+      <article class="history-item">
+        <div class="history-number">III</div>
+        <div class="history-content">
+          <span>THE ROAD</span>
+          <h4>BUILT THROUGH THE MILES</h4>
+          <p>Rides became traditions. Garage nights became chapters. Every departure, every return and every shared mile added another page to the club's history.</p>
+        </div>
+      </article>
+
+      <article class="history-item">
+        <div class="history-number">IV</div>
+        <div class="history-content">
+          <span>THE LEGACY</span>
+          <h4>THE ROAD CONTINUES</h4>
+          <p>Daredevil MC is not defined by where the story started, but by what the brotherhood chooses to build next. The machines may change, the roads may change, but the standard remains.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="story-quote">
+    <span>THE DAREDEVIL STANDARD</span>
+    <blockquote>“Carry the patch with pride. Ride with purpose. Leave a legacy worth remembering.”</blockquote>
+  </div>
+
+  <div class="story-bottom">
+    <div class="story-facts">
+      <div><span>FOUNDATION</span><strong>GARAGE · MACHINE · BROTHERHOOD</strong></div>
+      <div><span>VALUES</span><strong>LOYALTY · RESPECT · DISCIPLINE</strong></div>
+      <div><span>LEGACY</span><strong>EVERY RIDE BECOMES A CHAPTER</strong></div>
+    </div>
+    <a class="btn story-next-btn" href="activity.html">SEE THE NEXT ACTIVITY</a>
   </div>
 </section>
 
@@ -81,109 +137,109 @@
   </div>
   <div class="roster">
     <article class="member-card featured">
-      <div class="member-avatar"><img src="member-01.jpg" alt="Avatar Member 01" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-01.jpg" alt="Avatar Member 01" loading="lazy"></div>
       <span class="rank">PRESIDENT</span>
       <h3>Valozy Atsvier</h3>
       <p>PATCHED OFFICER</p>
     </article>
     <article class="member-card featured">
-      <div class="member-avatar"><img src="member-02.jpg" alt="Avatar Member 02" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-02.jpg" alt="Avatar Member 02" loading="lazy"></div>
       <span class="rank">VICE PRESIDENT</span>
       <h3>Marvel Toretto</h3>
       <p>PATCHED OFFICER</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-03.jpg" alt="Avatar Member 03" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-03.jpg" alt="Avatar Member 03" loading="lazy"></div>
       <span class="rank">SERGEANT AT ARMS</span>
       <h3>VACANT</h3>
       <p>OPEN POSITION</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-04.jpg" alt="Avatar Member 04" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-04.jpg" alt="Avatar Member 04" loading="lazy"></div>
       <span class="rank">ROAD CAPTAIN</span>
       <h3>VACANT</h3>
       <p>OPEN POSITION</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-05.jpg" alt="Avatar Member 05" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-05.jpg" alt="Avatar Member 05" loading="lazy"></div>
       <span class="rank">TREASURER</span>
       <h3>VACANT</h3>
       <p>OPEN POSITION</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-06.jpg" alt="Avatar Member 06" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-06.jpg" alt="Avatar Member 06" loading="lazy"></div>
       <span class="rank">PATCHED MEMBER 01</span>
       <h3>VACANT</h3>
       <p>OPEN SLOT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-07.jpg" alt="Avatar Member 07" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-07.jpg" alt="Avatar Member 07" loading="lazy"></div>
       <span class="rank">PATCHED MEMBER 02</span>
       <h3>VACANT</h3>
       <p>OPEN SLOT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-08.jpg" alt="Avatar Member 08" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-08.jpg" alt="Avatar Member 08" loading="lazy"></div>
       <span class="rank">PATCHED MEMBER 03</span>
       <h3>VACANT</h3>
       <p>OPEN SLOT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-09.jpg" alt="Avatar Member 09" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-09.jpg" alt="Avatar Member 09" loading="lazy"></div>
       <span class="rank">PROSPECT 01</span>
       <h3>VACANT</h3>
       <p>PROSPECT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-10.jpg" alt="Avatar Member 10" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-10.jpg" alt="Avatar Member 10" loading="lazy"></div>
       <span class="rank">PROSPECT 02</span>
       <h3>VACANT</h3>
       <p>PROSPECT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-11.jpg" alt="Avatar Member 11" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-11.jpg" alt="Avatar Member 11" loading="lazy"></div>
       <span class="rank">PROSPECT 03</span>
       <h3>VACANT</h3>
       <p>PROSPECT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-12.jpg" alt="Avatar Member 12" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-12.jpg" alt="Avatar Member 12" loading="lazy"></div>
       <span class="rank">PROSPECT 04</span>
       <h3>VACANT</h3>
       <p>PROSPECT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-13.jpg" alt="Avatar Member 13" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-13.jpg" alt="Avatar Member 13" loading="lazy"></div>
       <span class="rank">PROSPECT 05</span>
       <h3>VACANT</h3>
       <p>PROSPECT</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-14.jpg" alt="Avatar Member 14" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-14.jpg" alt="Avatar Member 14" loading="lazy"></div>
       <span class="rank">HANGAROUND 01</span>
       <h3>VACANT</h3>
       <p>HANGAROUND</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-15.jpg" alt="Avatar Member 15" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-15.jpg" alt="Avatar Member 15" loading="lazy"></div>
       <span class="rank">HANGAROUND 02</span>
       <h3>VACANT</h3>
       <p>HANGAROUND</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-16.jpg" alt="Avatar Member 16" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-16.jpg" alt="Avatar Member 16" loading="lazy"></div>
       <span class="rank">HANGAROUND 03</span>
       <h3>VACANT</h3>
       <p>HANGAROUND</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-17.jpg" alt="Avatar Member 17" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-17.jpg" alt="Avatar Member 17" loading="lazy"></div>
       <span class="rank">HANGAROUND 04</span>
       <h3>VACANT</h3>
       <p>HANGAROUND</p>
     </article>
     <article class="member-card">
-      <div class="member-avatar"><img src="member-18.jpg" alt="Avatar Member 18" loading="lazy"></div>
+      <div class="member-avatar"><img src="assets/member-18.jpg" alt="Avatar Member 18" loading="lazy"></div>
       <span class="rank">HANGAROUND 05</span>
       <h3>VACANT</h3>
       <p>HANGAROUND</p>
@@ -197,12 +253,12 @@
     <h2>ROAD & BROTHERHOOD</h2>
   </div>
   <div class="gallery-grid">
-    <img src="gallery-01.jpg" alt="Daredevil gallery 1">
-    <img src="gallery-02.jpg" alt="Daredevil gallery 2">
-    <img src="gallery-03.jpg" alt="Daredevil gallery 3">
-    <img src="gallery-04.jpg" alt="Daredevil gallery 4">
-    <img src="gallery-05.jpg" alt="Daredevil gallery 5">
-    <img src="gallery-06.jpg" alt="Daredevil gallery 6">
+    <img src="assets/gallery-01.jpg" alt="Daredevil gallery 1">
+    <img src="assets/gallery-02.jpg" alt="Daredevil gallery 2">
+    <img src="assets/gallery-03.jpg" alt="Daredevil gallery 3">
+    <img src="assets/gallery-04.jpg" alt="Daredevil gallery 4">
+    <img src="assets/gallery-05.jpg" alt="Daredevil gallery 5">
+    <img src="assets/gallery-06.jpg" alt="Daredevil gallery 6">
   </div>
 </main>
 
@@ -210,7 +266,7 @@
   <div>DAREDEVIL MC <span>•</span> 1%</div>
   <small>RIDE HARD, FEAR NOTHING</small>
 </footer>
-<audio id="bgMusic" src="music.mp3" loop preload="auto" playsinline></audio>
+<audio id="bgMusic" src="assets/music.mp3" loop preload="auto" playsinline></audio>
 <script src="script.js"></script>
 </body>
 </html>
