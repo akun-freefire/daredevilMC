@@ -806,3 +806,251 @@ footer small{color:#666a6c}
 .brand span{
   color:var(--photo-red);
 }
+
+/* ===== BLACKLETTER HEADINGS + STORY CARD IMAGE ===== */
+@font-face {
+  font-family: "Helltown";
+  src: url("assets/Helltown.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root{
+  --blackletter:"Helltown","UnifrakturCook","Old English Text MT",serif;
+}
+
+/* Headings use the same blackletter / gothic character as the reference image. */
+h1,h2,h3,
+.hero h1,
+.section-head h2,
+.story-copy h3,
+.member-card h3,
+.page-hero h1,
+.activity-info h3{
+  font-family:var(--blackletter) !important;
+  font-weight:700;
+  letter-spacing:0 !important;
+  text-transform:none;
+}
+
+.hero h1{
+  font-size:clamp(62px,10.8vw,142px);
+  line-height:.88;
+  text-shadow:0 5px 28px rgba(0,0,0,.72),2px 2px 0 rgba(169,37,42,.12);
+}
+.section-head h2{
+  font-size:clamp(38px,5.3vw,66px);
+  line-height:.95;
+}
+
+/* The story image is physically inside the card and acts as its visual layer. */
+.story-copy{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:680px;
+  padding:0;
+  display:flex;
+  align-items:stretch;
+  border:1px solid rgba(220,216,204,.18);
+  background:#090a0b;
+}
+.story-image{
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  filter:grayscale(.45) contrast(1.06) brightness(.72);
+  transform:scale(1.01);
+  transition:transform .65s ease,filter .45s ease;
+}
+.story-copy:hover .story-image{
+  transform:scale(1.035);
+  filter:grayscale(.2) contrast(1.06) brightness(.78);
+}
+.story-background{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.82) 30%,rgba(0,0,0,.48) 61%,rgba(0,0,0,.58) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.72));
+  pointer-events:none;
+}
+.story-content{
+  width:min(760px,100%);
+  padding:clamp(34px,5vw,58px);
+  position:relative;
+  z-index:1;
+}
+.story-copy .chapter-mark{
+  font-family:var(--blackletter) !important;
+  font-size:clamp(54px,6vw,82px);
+  line-height:.8;
+}
+.story-copy h3{
+  font-size:clamp(38px,4.2vw,58px);
+  line-height:.9;
+  margin:8px 0 24px;
+  color:#f0eee8;
+  text-shadow:0 4px 20px rgba(0,0,0,.65);
+}
+.member-card h3{
+  font-size:clamp(28px,3vw,39px);
+  line-height:.95;
+}
+.activity-info h3{
+  font-size:clamp(29px,3.2vw,43px);
+  line-height:.95;
+}
+.page-hero h1{
+  font-size:clamp(56px,8.5vw,116px);
+  line-height:.88;
+}
+
+@media(max-width:800px){
+  .hero h1{font-size:clamp(58px,15vw,105px)}
+  .section-head h2{font-size:clamp(38px,9vw,54px)}
+  .story-copy{min-height:620px}
+  .story-image{object-position:center 32%}
+  .story-background{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.54) 0%,rgba(0,0,0,.76) 43%,rgba(0,0,0,.94) 100%);
+  }
+  .story-content{padding:38px 28px 44px}
+  .story-copy h3{font-size:clamp(35px,9vw,50px)}
+  .member-card h3{font-size:clamp(27px,5vw,35px)}
+}
+
+@media(max-width:500px){
+  .hero h1{font-size:clamp(54px,17vw,86px)}
+  .section-head h2{font-size:clamp(34px,10vw,46px)}
+  .story-copy{min-height:600px}
+  .story-image{object-position:center 30%}
+  .story-content{padding:30px 20px 34px}
+  .story-copy h3{font-size:clamp(33px,10.5vw,44px)}
+  .story-copy>p:not(.story-kicker){font-size:13px;line-height:1.75}
+  .member-card h3{font-size:clamp(25px,8vw,32px)}
+  .activity-info h3{font-size:clamp(27px,8vw,36px)}
+  .page-hero h1{font-size:clamp(48px,14vw,70px)}
+}
+
+
+/* ===== HELLTOWN — BIGGER & MORE AGGRESSIVE TITLES ===== */
+h1,h2,h3,
+.hero h1,
+.section-head h2,
+.story-copy h3,
+.member-card h3,
+.page-hero h1,
+.activity-info h3,
+.chapter-mark{
+  font-family:"Helltown",serif !important;
+  font-weight:900;
+  font-style:normal;
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:.01em !important;
+}
+
+/* Main hero: oversized, heavy, intimidating */
+.hero h1{
+  font-size:clamp(88px,16vw,210px) !important;
+  line-height:.78 !important;
+  letter-spacing:.015em !important;
+  transform:scaleX(1.02);
+  text-shadow:
+    0 5px 0 rgba(0,0,0,.8),
+    0 10px 35px rgba(0,0,0,.8),
+    3px 3px 0 rgba(169,37,42,.22);
+}
+
+/* Section/page titles */
+.section-head h2{
+  font-size:clamp(52px,7vw,92px) !important;
+  line-height:.82 !important;
+  text-shadow:0 5px 22px rgba(0,0,0,.55);
+}
+.page-hero h1{
+  font-size:clamp(72px,11vw,150px) !important;
+  line-height:.8 !important;
+}
+.story-copy .chapter-mark{
+  font-size:clamp(68px,8vw,110px) !important;
+  line-height:.75 !important;
+}
+.story-copy h3{
+  font-size:clamp(48px,5.5vw,76px) !important;
+  line-height:.82 !important;
+  margin-top:12px;
+  text-shadow:0 5px 25px rgba(0,0,0,.8);
+}
+.member-card h3{
+  font-size:clamp(34px,3.5vw,48px) !important;
+  line-height:.82 !important;
+}
+.activity-info h3{
+  font-size:clamp(36px,4vw,52px) !important;
+  line-height:.82 !important;
+}
+.chapter-mark{
+  font-size:clamp(82px,8vw,120px) !important;
+  line-height:.78 !important;
+}
+
+/* Mobile: still large without overflowing */
+@media(max-width:800px){
+  .hero h1{
+    font-size:clamp(76px,20vw,132px) !important;
+    line-height:.78 !important;
+  }
+  .section-head h2{
+    font-size:clamp(48px,11vw,68px) !important;
+  }
+  .page-hero h1{
+    font-size:clamp(62px,14vw,100px) !important;
+  }
+  .story-copy .chapter-mark{
+    font-size:clamp(62px,13vw,92px) !important;
+  }
+  .story-copy h3{
+    font-size:clamp(43px,11vw,62px) !important;
+  }
+  .member-card h3{
+    font-size:clamp(31px,7vw,43px) !important;
+  }
+  .activity-info h3{
+    font-size:clamp(33px,8vw,46px) !important;
+  }
+}
+
+@media(max-width:500px){
+  .hero h1{
+    font-size:clamp(70px,22vw,108px) !important;
+    line-height:.76 !important;
+  }
+  .section-head h2{
+    font-size:clamp(44px,12vw,58px) !important;
+  }
+  .page-hero h1{
+    font-size:clamp(56px,16vw,86px) !important;
+  }
+  .story-copy .chapter-mark{
+    font-size:clamp(56px,15vw,78px) !important;
+  }
+  .story-copy h3{
+    font-size:clamp(39px,12vw,53px) !important;
+  }
+  .member-card h3{
+    font-size:clamp(29px,9vw,38px) !important;
+  }
+  .activity-info h3{
+    font-size:clamp(31px,9vw,41px) !important;
+  }
+}
